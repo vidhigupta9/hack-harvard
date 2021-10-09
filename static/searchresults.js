@@ -12,6 +12,6 @@ $( document ).ready(function() {
         if (event.keyCode === 13) {
           event.preventDefault();
           // copy the innerHTML of the search bar and move to the search results page
-        }
+        }    
       });
 })

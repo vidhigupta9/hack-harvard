@@ -1,4 +1,6 @@
 import requests
+import speech_recognition as sr
+import wave
 
 auth_key = '7a38375e92034c79bbecc5766323244e'
 
@@ -6,6 +8,15 @@ headers = {
     "authorization": auth_key,
     "content-type": "application/json"
 }
+
+def get_audio():
+	r = sr.Recognizer()
+	with sr.Microphone() as source:
+		audio = r.listen(source)
+		with open('speech.wav','wb') as f:
+			f.write(audio.get_wav_data())
+		obj = wave.open('speech.wav','r')
+		return obj
 
 def read_file(filename):
    with open(filename, 'rb') as _file:
@@ -16,7 +27,7 @@ def read_file(filename):
            yield data
 
 def trancribe_file():
-	upload_response = requests.post('https://api.assemblyai.com/v2/upload', headers=headers, data=read_file('filename'))
+	upload_response = requests.post('https://api.assemblyai.com/v2/upload', headers=headers, data=get_audio())
 	audio_url = upload_response.json()['upload_url']
 
 	transcript_request = {'audio_url': audio_url}

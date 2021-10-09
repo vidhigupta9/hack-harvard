@@ -5,16 +5,16 @@
         <meta name="viewport" content="width=device=width, initial-scale=1.0">
         <title class="search_inquiry"> Court Avengers </title>
 
-        <link rel="stylesheet" href="style.css">
-        <link href="jquery/css/ui-lightness/jquery-ui-1.10.0.custom.css" rel="stylesheet" />
-        <link href="jquery/css/ui-lightness/jquery-ui-1.10.0.custom.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="/static/style.css">
+        <link href="/static/jquery/css/ui-lightness/jquery-ui-1.10.0.custom.css" rel="stylesheet" />
+        <link href="/static/jquery/css/ui-lightness/jquery-ui-1.10.0.custom.min.css" rel="stylesheet" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
     </head>
     <body style="background-color: whitesmoke;">
-        <script src="jquery/js/jquery-1.9.0.min.js"></script>
-        <script src="jquery/js/jquery-ui-1.10.0.custom.min.js"></script>
-        <script src="searchresults.js"></script>
+        <script src="/static/jquery/js/jquery-1.9.0.min.js"></script>
+        <script src="/static/jquery/js/jquery-ui-1.10.0.custom.min.js"></script>
+        <script src="/static/searchresults.js"></script>
 
         <nav class="navbar sticky-top p-3" style="background-color: #8C1515;">
             <span class="websiteNameSmall"> Court Avengers </span>
@@ -41,10 +41,10 @@
                     <div class="one-entry">
                         <div class="hoverable">
                             <div class="law-kind"> Relevant Law or Case Precedent? </div> 
-                            <h5 class="law-title"> The Title of the Law </h5>
+                            <h5 class="law-title"> {{ Heading }} </h5>
                         </div>
                         <hr>
-                        <p class="description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+                        <p class="description"> {{ Summary }} </p>
                         <!-- <hr> -->
                     </div>
                     <div class="one-entry">
