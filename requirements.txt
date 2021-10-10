@@ -1,3 +1,7 @@
 requests
 keybert
 flair
+flask
+speech_recognition
+wave
+gunicorn==19.9.0
