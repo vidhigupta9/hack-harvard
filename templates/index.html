@@ -18,11 +18,13 @@
     
         <div class="frontbar">
             <h1 class="websiteName"> Court Avengers </h1>
-            <span class="microphone icon"><i class="fa fa-microphone fa-2x"></i></span>
-            <input class="input" style="width: 80%; margin-left: -10px; z-index: 1; "type="search" autocomplete="off" spellcheck="false" role="combobox" aria-live="polite"
-                placeholder="How can we help you?">
+            <form class="searchbar">
+                <button class="microphone"><i class="fa fa-microphone fa-2x"></i></button>
+                <input class="input" style="width: 80%; margin-left: -10px; z-index: 1; "type="search" autocomplete="off" spellcheck="false" role="combobox" aria-live="polite"
+                    placeholder="How can we help you?">
+                </form>
             <div class="searchbutton">
-                <a href="{{ url_for('search')}}">
+                <a class="enter" href="{{ url_for('search')}}">
                     <input class="searchclick contact hoverable" value="Search Results" type="submit">
                 </a>
                 <input class="contact hoverable" value="Emergency Call" type="submit">
