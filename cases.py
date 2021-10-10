@@ -1,17 +1,18 @@
 from keybert import KeyBERT
-from flair.embeddings import TransformerDocumentEmbeddings
+#from flair.embeddings import TransformerDocumentEmbeddings
 import requests
 
-roberta = TransformerDocumentEmbeddings('roberta-base')
-kw_model = KeyBERT(model=roberta)
+#roberta = TransformerDocumentEmbeddings('roberta-base')
+kw_model = KeyBERT()
 
 def get_query(ques):
-    topn = 5 if len(ques<=100) else 8
+    topn = 4
 
     keys = kw_model.extract_keywords(ques, keyphrase_ngram_range=(1,1), stop_words='english', top_n=topn)
     query = ""
     for i in range(len(keys)):
         query += keys[i][0]
+        query += " "
 
     return query
 
