@@ -1,4 +1,6 @@
 $( document ).ready(function() {
+    var searchClick = document.getElementsByClassName("enter"); 
+    var inputs = document.getElementsByClassName("input");
     
     // If the mouse toggles on the title, an underline appears; when it leaves, the underline disappears
     $(document).on("mouseenter", ".law-title", function() {
@@ -8,10 +10,10 @@ $( document ).ready(function() {
         $(this).removeClass("underline");
     })
 
-    $(".input").keypress(function(event) { // submitting search result by pressing Enter
+    inputs.addEventListener("keyup", function(event) { // submitting search result by pressing Enter
         if (event.keyCode === 13) {
           event.preventDefault();
-          // copy the innerHTML of the search bar and move to the search results page
+          searchClick.click();
         }    
       });
 })
