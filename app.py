@@ -10,7 +10,7 @@ def home():
 
 @app.route('/search')
 def search():
-    return render_template('searchresults.html',Heading = "hey",Summary= "xyzzzzzzzzzzz")
+    return render_template('searchresults.html')
 
 
 if __name__ == "__main__":
