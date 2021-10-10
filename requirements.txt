@@ -1,7 +1,7 @@
 requests
 keybert
 flair
-flask
-speech_recognition
+flask==1.1.1
+SpeechRecognition==3.8.1
 wave
 gunicorn==19.9.0
