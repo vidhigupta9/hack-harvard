@@ -10,10 +10,10 @@ $( document ).ready(function() {
         $(this).removeClass("underline");
     })
 
-    inputs.addEventListener("keyup", function(event) { // submitting search result by pressing Enter
-        if (event.keyCode === 13) {
-          event.preventDefault();
-          searchClick.click();
-        }    
-      });
+    // inputs.addEventListener("keyup", function(event) { // submitting search result by pressing Enter
+    //     if (event.keyCode === 13) {
+    //       event.preventDefault();
+    //       searchClick.click();
+    //     }    
+    //   });
 })
